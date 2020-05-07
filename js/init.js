@@ -1,7 +1,11 @@
-(function($){
-  $(function(){
-
+(function ($) {
+  $('.carousel').carousel({
+    interval: 2000
+  });
+  $(function () {
     $('.sidenav').sidenav();
+  }); // 
 
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+  // Or with jQuery
+
+}); (jQuery); // end of jQuery name space
