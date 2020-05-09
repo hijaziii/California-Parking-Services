@@ -1,0 +1,12 @@
+
+@media only screen and (max-width: 815px) {
+    nav {
+        height: 130px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    nav {
+        height: 200px;
+    }
+}
