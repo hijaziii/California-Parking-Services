@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel="stylesheet" href="parking_management.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+    integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+    crossorigin="anonymous"></script>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>California Parking Services</title>
+</head>
+
+<body id="home" class="scrollspy">
+  <!-- Navbar -->
+  <div class="navbar-fixed">
+    <nav class="black">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Parking Management</a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="#popular">Popular Services</a>
+            </li>
+            <li>
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <ul class="sidenav" id="mobile-nav">
+    <li>
+      <a href="#home">Home</a>
+    </li>
+    <li>
+      <a href="#popular">Popular Services</a>
+    </li>
+    <li>
+      <a href="#gallery">Gallery</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+  </ul>
+
+  <!-- Section: Slider -->
+  <section class="slider">
+    <ul class="slides">
+     
+      <li>
+        <img src="img/resort2.jpg">
+        <!-- random image -->
+        <div class="caption left-align">
+          <h2><span class="yellow-text">California Parking Services</span></h2>
+          <h5 class="light white-text text-lighten-3 hide-on-small-only"> We manage or lease many structures and lots strategically located in SoCal. The key to successful parking management lies in identifying market growth areas, finding the perfect property & providing the right service packages to meet demand.</h5>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Section: Icon Boxes -->
+  <div class="navbar">
+    <nav class="black">
+      <div class="container">
+    </div>
+  </div>
+  
+
+  <!-- Section: Icon Boxes -->
+  <section class="section section-icons grey lighten-4 center">
+    <div class="container">
+      <div class="row">
+        <div class="col-2 s12">
+          <div class="card-panel">
+            <i class="material-icons large black-text">check_box</i>
+            <h4>Our Goals</h4>
+            <ul type= "disk">Our management monitors and evaluates the following:
+
+                <li>Contract management and compliance.</li>
+                <li>Attendants customer service skills and training.</li>
+                <li>Automation analysis.</li>
+                <li>Parking rates surveys.</li>
+                <li>Products and service packages offered.</li>
+                <li>Accountability.</li>
+                <li>layout to maximize space availability.</li>
+                <li>Risk management and loss prevention.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<section class="section section-icons grey lighten-4 center">
+  <div class="container">
+    <div class="row">
+      <div class="col-2 s12">
+        <div class="card-panel">
+          <i class="material-icons large black-text">directions_car</i>
+          <h4>Parking Services</h4>
+          <ul type= "disk">We offer services including but not limited to:
+
+            <li>Public Parking</li>
+            <li>Monthly day/night parking.</li>
+            <li>Lot rental for film shoots, premiers and special events.</li>
+            <li>Valet Parking</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Section: Follow -->
+  <section class="section section-follow black darken-2 yellow-text center">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h4>Follow California Parking Services</h4>
+          <p>Follow us on social media</p>
+          <a href="#" class="yellow-text">
+            <i class="fab fa-facebook fa-4x"></i>
+          </a>
+          <a href="#" class="yellow-text">
+            <i class="fab fa-twitter fa-4x"></i>
+          </a>
+          <a href="#" class="yellow-text">
+            <i class="fab fa-linkedin fa-4x"></i>
+          </a>
+          <a href="#" class="yellow-text">
+            <i class="fab fa-google-plus fa-4x"></i>
+          </a>
+          <a href="#" class="yellow-text">
+            <i class="fab fa-pinterest fa-4x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="section black darken-2 white-text center">
+    <p class="flow-text">California Parking Services &copy; since 1985 </p>
+  </footer>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <script>
+    // Sidenav
+    const sideNav = document.querySelector('.sidenav');
+    M.Sidenav.init(sideNav, {});
+
+    // Slider
+    const slider = document.querySelector('.slider');
+    M.Slider.init(slider, {
+      indicators: false,
+      height: 500,
+      transition: 500,
+      interval: 6000
+    });
+
+    // Material Boxed
+    const mb = document.querySelectorAll('.materialboxed');
+    M.Materialbox.init(mb, {});
+
+    // ScrollSpy
+    const ss = document.querySelectorAll('.scrollspy');
+    M.ScrollSpy.init(ss, {});
+
+  </script>
+</body>
+
+</html>
