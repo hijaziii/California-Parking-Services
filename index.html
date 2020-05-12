@@ -190,7 +190,7 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Return</a>
               </div>
             </div>
 
@@ -488,7 +488,9 @@
   <script src="./assets/js/clock.js"></script>
 
   <script>
+    
     $(document).ready(function () {
+      setInterval(function() {
 
 
       $('#modal_btn1').click(function () {
@@ -507,38 +509,47 @@
         $('#modal_header').text('More Things');
         $('#scheduler_container').empty();
         // $('#scheduler_container').append(forFuc());
-        // setInterval(function() {   
+         
         // $(document).ready(function() {
-            
+         
             $.ajax({
               url: "https://covidtracking.com/api/v1/states/daily.json",
               method: 'get',
               success: function(response) {
                 // JSON format => Javascript Object Notation
+                
                 console.log(response[5]);
                 var cali= response[5];
+               
                 
                 var currentDate = new Date().getHours();
                       console.log(currentDate);
+                       
                       if (currentDate === 24){
                          localStorage.setItem("generalCases", cali.positive);
                           }
+                       
                          var todaysCases = parseInt(cali.positive) - parseInt(localStorage.getItem("generalCases"));
                         console.log(todaysCases);
-                 
+                    
+                     
                 $('#scheduler_container').html('<h1>' + cali.state + ' </h1>');
+                $('#scheduler_container').append('<p>Last Updated: ' + cali.lastUpdateEt + ' </p>');
                 $('#scheduler_container').append('<p>Confirmed: ' + cali.positive + ' </p>');
                 $('#scheduler_container').append('<p>Death: ' + cali.death + ' </p>');
                 $('#scheduler_container').append('<p>Recovered: ' + cali.recovered + ' </p>');
-                $('#scheduler_container').append('<p>Today: ' +  todaysCases + ' </p>');
+                $('#scheduler_container').append('<p>Todays Cases: ' +  todaysCases + ' </p>');
+             
         
               },
               
             });
          
           // });
-        // }, 1000)
+        
       });
+    
+    }, 1000)
 
 
       setInterval(function () {
