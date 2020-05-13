@@ -142,15 +142,88 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="card-panel">
-            <i class="material-icons large black-text">cake</i>
-            <h4>Events</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, tempore?</p>
-            <!-- Modal Trigger -->
-            <a class="waves-effect waves-light btn orange modal-trigger" href="#modal1" id="modal_btn1">Locations</a>
+            <i class="material-icons large amber-text">wallpaper</i>
+              <h4>Your current weather</h4>
+              <p>Push the button below to see your weather</p>
+  
+              <!-- Modal Trigger -->
+              <a class="waves-effect waves-light btn amber modal-trigger" href="#modal1" id="scheduler_btn">Weather Time</a>
+  
+              <!-- Modal Structure -->
+              <div id="modal1" class="modal modal-fixed-footer">
+                <div class="modal-content">
 
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h1 id="title"></h1>
+                      <p id="title_section"><i class="material-icons large blue-text">location_city</i>
+                        <ul>
+                          <!-- Retrieved data will be dumped here -->
+                          <div class="city"></div><i class="material-icons large blue-text">location_city</i>
+                          <div class="wind"></div><i class="fas fa-wind"></i>
+                          <div class="humidity"></div><i class="material-icons large amber-text">sun</i>
+                          <div class="temp"></div><i class="material-icons large amber-text">temperature-low</i>
+                        
+                          <!-- Add extra div for the bonus Fahrenheit temp -->
+                          <div class="tempF"></div><i class="material-icons large amber-text">temperature-low</i>
+              
+                          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                          <script type="text/javascript">
+                          
+                            // This is our API key
+                            var APIKey = "3d9efbfbf46372a4ff1a6d074b5ed18c";
+                        
+                            // Here we are building the URL we need to query the database
+                            var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
+                              "lat=34.0522&lon=-118.2437&appid=" + APIKey;
+                            
+                            // Here we run our AJAX call to the OpenWeatherMap API
+                            $.ajax({
+                              url: queryURL,
+                              method: "GET"
+                            })
+                              // We store all of the retrieved data inside of an object called "response"
+                              .then(function(response) {
+                        
+                                // Log the queryURL
+                                console.log(queryURL);
+                        
+                                // Log the resulting object
+                                console.log(response);
+                        
+                                // Transfer content to HTML
+                                $(".city").html("<h1>" + response.name + " Weather Details</h1>");
+                                $(".wind").text("Wind Speed: " + response.wind.speed);
+                                $(".humidity").text("Humidity: " + response.main.humidity);
+                                
 
+                                // Convert the temp to fahrenheit
+                                var tempF = (response.main.temp - 273.15) * 1.80 + 32;
+                        
+                                // add temp content to html
+                                $(".temp").text("Temperature (K) " + response.main.temp);
+                                $(".tempF").text("Temperature (F) " + tempF.toFixed(2));
+                        
+                                // Log the data in the console as well
+                                console.log("Wind Speed: " + response.wind.speed);
+                                console.log("Humidity: " + response.main.humidity);
+                                console.log("Temperature (F): " + tempF);
+                              });
+                            </script>
+                    </div>
+                  </div>
+  
+                  <div id="scheduler_container" class="grey lighten-4">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+
+            </div>
           </div>
-        </div>
+        
         <div class="col s12 m4">
           <div class="card-panel">
             <canvas id="canvas" width="90" height="90" style="background-color:white">
