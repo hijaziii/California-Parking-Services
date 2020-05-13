@@ -6,13 +6,15 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="Assets/css/main.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
     integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
     crossorigin="anonymous"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  
+  
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="./images/logo.png">
   <title>California Parking Services</title>
 </head>
 
@@ -22,7 +24,7 @@
     <nav class="black">
       <div class="container">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo"><img src ="images/logo.png" width="66" height="55"></a>
+          <a href="#" class="brand-logo"><img src="images/logo.png" width="66" height="55"></a>
           <a href="#" data-target="mobile-nav" class="sidenav-trigger">
             <i class="material-icons">menu</i>
           </a>
@@ -34,7 +36,7 @@
               <a href="valet.html">Valet</a>
             </li>
             <li>
-              <a href="management.html">Parking Mng</a>
+              <a href="parking_management.html">Parking Mng</a>
             </li>
             <li>
               <a href="transportation.html">Transpo</a>
@@ -43,7 +45,7 @@
               <a href="events.html">Events</a>
             </li>
             <li>
-              <a href="carwash.html">Mobile Car Wash</a>
+              <a href="car_wash.html">Mobile Car Wash</a>
             </li>
             <li>
               <a href="contact.html">Contact</a>
@@ -61,7 +63,7 @@
       <a href="valet.html">Valet</a>
     </li>
     <li>
-      <a href="management.html">Parking Mng</a>
+      <a href="parking_management.html">Parking Mng</a>
     </li>
     <li>
       <a href="transportation.html">Transpor</a>
@@ -70,7 +72,7 @@
       <a href="events.html">Events</a>
     </li>
     <li>
-      <a href="carwash.html">Car Mobile Wash</a>
+      <a href="car_wash.html">Mobile Car Wash</a>
     </li>
     <li>
       <a href="contact.html">Contact</a>
@@ -140,24 +142,137 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="card-panel">
-            <i class="material-icons large black-text">room </i>
-            <h4>Pick Where</h4>
+            <i class="material-icons large black-text">cake</i>
+            <h4>Events</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, tempore?</p>
-         
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn orange modal-trigger" href="#modal1" id="modal_btn1">Locations</a>
+
+
           </div>
         </div>
         <div class="col s12 m4">
           <div class="card-panel">
-            <i class="material-icons large black-text">emoji_events</i>
-            <h4>Success</h4>
+            <canvas id="canvas" width="90" height="90" style="background-color:white">
+            </canvas>
+            <h4>Work Scheduler</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, tempore?</p>
+
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn orange modal-trigger" href="#modal1" id="scheduler_btn">Locations</a>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal modal-fixed-footer">
+              <div class="modal-content">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h1 id="modal_header">Covid 19</h1>
+                    <p id="title_section"></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolorem, pariatur culpa
+                      perferendis
+                      eligendi
+                      veritatis consequatur? Veniam quibusdam labore excepturi ducimus error aspernatur consequatur
+                      temporibus sunt
+                      facilis. Vel, commodi! Velit!</p>
+
+                  </div>
+                </div>
+
+                <div id="scheduler_container" class="grey lighten-4">
+
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Return</a>
+              </div>
+            </div>
+
           </div>
         </div>
         <div class="col s12 m4">
           <div class="card-panel">
-            <i class="material-icons large black-text">airplanemode_active</i>
-            <h4>Fly Cheap</h4>
+            <i class="material-icons large black-text"><img alt="Coronavirus icon"
+                src="https://img.icons8.com/ios-filled/2x/coronavirus.png" style="height:50px;width:50px;"></i>
+            <h4>Coronavirus Updates</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, tempore?</p>
+
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn orange modal-trigger" href="#modal1" id="coronavirus">Locations</a>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal modal-fixed-footer">
+              <div class="modal-content">
+
+                <!-- Section: Gallery -->
+                <section id="gallery" class="section section-gallery scrollspy">
+                  <div class="container">
+                    <h4 class="center">
+                      <span class="orange-text">Our</span> Locations
+                    </h4>
+                    <div class="row">
+                      <div class="col s12 m3">
+                        <img src="https://source.unsplash.com/1600x900/?parking" alt=""
+                          class="materialboxed responsive-img">
+                      </div>
+                      <div class="col s12 m3">
+                        <img src="https://source.unsplash.com/1600x900/?event" alt=""
+                          class="materialboxed responsive-img">
+                      </div>
+                      <div class="col s12 m3">
+                        <img src="https://source.unsplash.com/1600x900/?casino" alt=""
+                          class="materialboxed responsive-img">
+                      </div>
+                      <div class="col s12 m3">
+                        <img src="https://source.unsplash.com/1600x900/?sports" alt=""
+                          class="materialboxed responsive-img">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col s12 m3">
+                        <img src="https://source.unsplash.com/1600x900/?city" alt=""
+                          class="materialboxed responsive-img">
+                      </div>
+                      <div class="col s12 m3">
+                        <img src="https://source.unsplash.com/1600x900/?building" alt=""
+                          class="materialboxed responsive-img">
+                      </div>
+                      <div class="col s12 m3">
+                        <img src="https://source.unsplash.com/1600x900/?trees" alt=""
+                          class="materialboxed responsive-img">
+                      </div>
+                      <div class="col s12 m3">
+                        <img src="https://source.unsplash.com/1600x900/?parking lot" alt=""
+                          class="materialboxed responsive-img">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col s12 m3">
+                        <img src="https://source.unsplash.com/1600x900/?beaches" alt=""
+                          class="materialboxed responsive-img">
+                      </div>
+                      <div class="col s12 m3">
+                        <img src="https://source.unsplash.com/1600x900/?traveling" alt=""
+                          class="materialboxed responsive-img">
+                      </div>
+                      <div class="col s12 m3">
+                        <img src="https://source.unsplash.com/1600x900/?bridge" alt=""
+                          class="materialboxed responsive-img">
+                      </div>
+                      <div class="col s12 m3">
+                        <img src="https://source.unsplash.com/1600x900/?beach, travel,boat" alt=""
+                          class="materialboxed responsive-img">
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -174,7 +289,7 @@
           <div class="col s12 m4">
             <div class="card">
               <div class="card-image">
-                <img src="./images/car-driving-keys-repair-97079.jpg" alt="">
+                <a href="valet.html"><img src="./images/car-driving-keys-repair-97079.jpg" alt=""></a>
                 <span class="card-title">Valet</span>
               </div>
               <div class="card-content">
@@ -185,7 +300,7 @@
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="./images/parking_management2.jpg" alt="">
+              <a href="managment.html"><img src="./images/parking_management2.jpg" alt=""></a>
               <span class="card-title">Parking Management</span>
             </div>
             <div class="card-content">
@@ -197,7 +312,7 @@
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="./images/shuttle.jpg" alt="">
+              <a href="transportation.html"><img src="./images/shuttle.jpg" alt=""></a>
               <span class="card-title">Transportation</span>
             </div>
             <div class="card-content">
@@ -210,7 +325,7 @@
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="./images/blacklimo.jpg" alt="">
+            <a href="events.html"><img src="./images/blacklimo.jpg" alt=""></a>
               <span class="card-title">Events</span>
             </div>
             <div class="card-content">
@@ -222,7 +337,7 @@
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="./images/carwash1.jpg" alt="">
+            <a href="carwash.html"><img src="./images/carwash1.jpg" alt=""></a>
               <span class="card-title">Mobile Car Wash</span>
             </div>
             <div class="card-content">
@@ -234,7 +349,7 @@
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="./images/contactus5.jpg" alt="Contact us logo">
+              <a href="contact.html"></a><img src="./images/contactus5.jpg" alt="Contact us logo"></a>
               <span class="card-title">Contact Us</span>
             </div>
             <div class="card-content">
@@ -246,142 +361,56 @@
     </div>
   </section>
 
-  <!-- Section: Follow -->
+   <!-- Section: Follow -->
+
    <section class="section section-follow card-panel yellow darken-2 white-text center">
+
     <div class="container">
+
       <div class="row">
+
         <div class="col s12">
+
           <h4>Follow California Parking Service</h4>
+
           <a href="https://www.facebook.com/cm.pk.374549" class="material-icons">
+
             <svg class="svg-inline--fa fa-facebook fa-w-14 fa-2x" aria-hidden="true" data-prefix="fab" data-icon="facebook" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z"></path></svg><!-- <i class="fab fa-facebook fa-2x"></i> -->
+
           </a>
+
           <a href="https://twitter.com/CaliforniaPark2" class="material-icons">
+
             <svg class="svg-inline--fa fa-twitter fa-w-16 fa-2x" aria-hidden="true" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><!-- <i class="fab fa-twitter fa-2x"></i> -->
+
           </a>
+
           <a href="https://www.instagram.com/californiaparkingservice/"><i class="fab fa-instagram fa-3x"></i></a>
-            
-          </a>
+
           <a href="https://www.youtube.com/?reload=9" class="material-icons"><span class="material-icons">subscriptions</span>
+
           </a>
+
           <a href="https://www.linkedin.com/in/california-parking-services-b0a9a01a9/" class="material-icons">
+
             <svg class="svg-inline--fa fa-linkedin fa-w-14 fa-2x" aria-hidden="true" data-prefix="fab" data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg><!-- <i class="fab fa-linkedin fa-2x"></i> -->
+
           </a>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
-
-  <!-- Section: Gallery -->
-  <section id="gallery" class="section section-gallery scrollspy">
-    <div class="container">
-      <h4 class="center">
-        <span class="orange-text">Photo</span> Gallery
-      </h4>
-      <div class="row">
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?parking" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?event" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?casino" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?sports" alt="" class="materialboxed responsive-img">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?city" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?building" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?trees" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?parking lot" alt="" class="materialboxed responsive-img">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?beaches" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?traveling" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?bridge" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?beach, travel,boat" alt=""
-            class="materialboxed responsive-img">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section: Contact -->
-  <!-- <section id="contact" class="section section-contact scrollspy">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m6">
-          <div class="card-panel black white-text center">
-            <i class="material-icons">email</i>
-            <h5>Contact Us </h5>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium fugit tempore hic enim
-              possimus molestias
-              quisquam impedit corrupti eveniet.</p>
-          </div>
-          <ul class="collection with-header">
-            <li class="collection-header">
-              <h4>Location</h4>
-            </li>
-            <li class="collection-item">13181 Crossroads Parkway, Suite 580</li>
-            <li class="collection-item">City of Industry, CA 91746</li>
-            <li class="collection-item">Office: 562-326-5741</li>
-            <li class="collection-item">Direct: 562-326-5743</li>
-            <li class="collection-item">Fax---: 562-463-5726</li>
-          </ul>
-        </div> -->
-        <!-- <div class="col s12 m6">
-          <div class="card-panel #eceff1 ">
-            <h5>Please fill out this form</h5>
-            <div class="input-field">
-              <input type="text" placeholder="Name">
-            </div>
-            <div class="input-field">
-              <input type="text" placeholder="Email">
-            </div>
-            <div class="input-field">
-              <input type="text" placeholder="Phone">
-            </div>
-            <div class="input-field">
-              <input type="text" placeholder="Subject">
-            </div>
-            <div class="input-field">
-              <textarea class="materialize-textarea" placeholder="Enter Message"></textarea>
-            </div> -->
-            <!-- <input type="submit" value="Submit" class="btn orange"> -->
-            <!-- <input type="button" value="Send Email"  class="btn orange" onclick="sendEmail()">
-          </div> -->
-          <!-- <height="877px> -->
-          <!-- <div>
-            <iframe src="https://www.powr.io/form-builder/u/f45433e8_1588974109#platform=iframe" style="width:50%;" height="750px" frameborder="0"></iframe>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  
-
+ 
   <!-- Footer -->
+
   <footer class="section black darken-2 white-text center">
+
     <p class="flow-text">California Parking Services &copy; since 1985 </p>
+
   </footer>
 
   <!--JavaScript at end of body for optimized loading-->
@@ -405,11 +434,13 @@
     const ac = document.querySelector('.autocomplete');
     M.Autocomplete.init(ac, {
       data: {
-        "Events": null,
-        "Transportation": null,
-        "Management": null,
-        "Mobile Wash": null,
-        "Contact Us": null,
+        "Aruba": null,
+        "Cancun Mexico": null,
+        "Hawaii": null,
+        "Florida": null,
+        "California": null,
+        "Jamacia": null,
+        "Europe": null,
       }
     });
 
@@ -421,24 +452,194 @@
     const ss = document.querySelectorAll('.scrollspy');
     M.ScrollSpy.init(ss, {});
 
+    var elems = document.querySelectorAll('.modal');
+    M.Modal.init(elems, {
+
+    });
+
   </script>
 
-  <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script type="text/JavaScript" src=" https://MomentJS.com/downloads/moment.js"></script>
+
+
+  <script src="./assets/js/scheduler.js"></script>
+  <script src="./assets/js/button_panel.js"></script>
+  <script src="./assets/js/picture_panel.js"></script>
+  <script src="./assets/js/clock.js"></script>
+
   <script>
-function sendEmail() {
-  Email.send({
-      Host : "smtp.mailtrap.io",
-      Username : "caliparkingservicessince1985@gmail.com",
-      Password : "CMPKOMAR!@#123",
-      To : 'recipient@example.com',
-      From : "sender@example.com",
-      Subject : "Test email",
-      Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
-  }).then(
-    message => alert(message)
-  );
-  }
-</script> -->
+    
+    $(document).ready(function () {
+      setInterval(function() {
+
+
+      $('#modal_btn1').click(function () {
+        $('#modal_header').text('Events');
+        $('#scheduler_container').empty();
+        $('#scheduler_container').append(picFuc());
+      });
+
+      $('#scheduler_btn').click(function () {
+
+        $('#modal_header').text('Work Scheduler');
+        initializeScheduler();
+      });
+
+      $('#coronavirus').click(function () {
+        $('#modal_header').text('More Things');
+        $('#scheduler_container').empty();
+        // $('#scheduler_container').append(forFuc());
+         
+        // $(document).ready(function() {
+         
+            $.ajax({
+              url: "https://covidtracking.com/api/v1/states/daily.json",
+              method: 'get',
+              success: function(response) {
+                // JSON format => Javascript Object Notation
+                
+                console.log(response[5]);
+                var cali= response[5];
+               
+                
+                var currentDate = new Date().getHours();
+                      console.log(currentDate);
+                       
+                      if (currentDate === 24){
+                         localStorage.setItem("generalCases", cali.positive);
+                          }
+                       
+                         var todaysCases = parseInt(cali.positive) - parseInt(localStorage.getItem("generalCases"));
+                        console.log(todaysCases);
+                    
+                     
+                $('#scheduler_container').html('<h1>' + cali.state + ' </h1>');
+                $('#scheduler_container').append('<p>Last Updated: ' + cali.lastUpdateEt + ' </p>');
+                $('#scheduler_container').append('<p>Confirmed: ' + cali.positive + ' </p>');
+                $('#scheduler_container').append('<p>Death: ' + cali.death + ' </p>');
+                $('#scheduler_container').append('<p>Recovered: ' + cali.recovered + ' </p>');
+                $('#scheduler_container').append('<p>Todays Cases: ' +  todaysCases + ' </p>');
+             
+        
+              },
+              
+            });
+         
+          // });
+        
+      });
+    
+    }, 1000)
+
+
+      setInterval(function () {
+        var a = moment().toString();
+        $('#clock').text(a)
+      }, 1000);
+
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      var radius = canvas.height / 2;
+      ctx.translate(radius, radius);
+      radius = radius * 0.90
+      setInterval(drawClock, 1000);
+
+
+      function drawClock() {
+        drawFace(ctx, radius);
+        drawNumbers(ctx, radius);
+        drawTime(ctx, radius);
+      }
+
+      function drawFace(ctx, radius) {
+        var grad;
+        ctx.beginPath();
+        ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
+        grad.addColorStop(0, '#333');
+        grad.addColorStop(0.5, 'white');
+        grad.addColorStop(1, '#333');
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = radius * 0.1;
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+        ctx.fillStyle = '#333';
+        ctx.fill();
+      }
+
+      function drawNumbers(ctx, radius) {
+        var ang;
+        var num;
+        ctx.font = radius * 0.15 + "px arial";
+        ctx.textBaseline = "middle";
+        ctx.textAlign = "center";
+        for (num = 1; num < 13; num++) {
+          ang = num * Math.PI / 6;
+          ctx.rotate(ang);
+          ctx.translate(0, -radius * 0.85);
+          ctx.rotate(-ang);
+          ctx.fillText(num.toString(), 0, 0);
+          ctx.rotate(ang);
+          ctx.translate(0, radius * 0.85);
+          ctx.rotate(-ang);
+        }
+      }
+
+      function drawTime(ctx, radius) {
+        var now = new Date();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+        //hour
+        hour = hour % 12;
+        hour = (hour * Math.PI / 6) +
+          (minute * Math.PI / (6 * 60)) +
+          (second * Math.PI / (360 * 60));
+        drawHand(ctx, hour, radius * 0.5, radius * 0.07);
+        //minute
+        minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
+        drawHand(ctx, minute, radius * 0.8, radius * 0.07);
+        // second
+        second = (second * Math.PI / 30);
+        drawHand(ctx, second, radius * 0.9, radius * 0.02);
+      }
+
+      function drawHand(ctx, pos, length, width) {
+        ctx.beginPath();
+        ctx.lineWidth = width;
+        ctx.lineCap = "round";
+        ctx.moveTo(0, 0);
+        ctx.rotate(pos);
+        ctx.lineTo(0, -length);
+        ctx.stroke();
+        ctx.rotate(-pos);
+      }
+
+
+    });
+
+
+
+
+    
+
+
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </body>
 
 </html>
