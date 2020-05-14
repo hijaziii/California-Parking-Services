@@ -19,9 +19,6 @@ $(document).ready(function () {
         $('#scheduler_container').empty();
         coronaVirus();
 
-
-
-
     });
 
     setInterval(function () {
