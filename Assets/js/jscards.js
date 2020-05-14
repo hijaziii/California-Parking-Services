@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
 
-
     $('#modal_btn1').click(function () {
         $('#modal_header').text('Events');
         $('#scheduler_container').empty();
@@ -27,10 +26,10 @@ $(document).ready(function () {
     }, 1000);
 
     var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    var radius = canvas.height / 2;
+    // var ctx = canvas.getContext("2d");
+     var radius = canvas.height / 2;
     ctx.translate(radius, radius);
-    radius = radius * 0.90
+     radius = radius * 0.90
     setInterval(drawClock, 1000);
 
 
