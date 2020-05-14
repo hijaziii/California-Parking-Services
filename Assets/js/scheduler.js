@@ -23,7 +23,7 @@ if (stored_dates) {
 
 var a = moment().toString();
 var c = moment().format("LLLL");
-$("#title_section").text('HELLO ' + c);
+// $("#title_section").text('HELLO ' + c);
 
 var hours = {
     start: 7,   // 7am
