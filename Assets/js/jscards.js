@@ -9,8 +9,8 @@ $(document).ready(function () {
     });
 
     $('#scheduler_btn').click(function () {
-
-        $('#modal_header').text('Work Scheduler');
+    $('#modal_header').text('Work Scheduler');
+    $('#scheduler_container').empty();
         initializeScheduler();
     });
 
