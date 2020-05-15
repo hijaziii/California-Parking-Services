@@ -11,11 +11,8 @@ nav ul li:hover {
     height:400px;
     width:100%;
 }
-
- 
-
     
+.card {
+    min-height: 400px;
+}
 
-
-    
-    
