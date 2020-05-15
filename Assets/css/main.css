@@ -1,4 +1,11 @@
 
+.icon-block {
+    padding: 0 15px;
+  }
+  .icon-block .material-icons {
+      font-size: inherit;
+  }
+  
 @media only screen and (max-width: 815px) {
     nav {
         height: 130px;
@@ -13,3 +20,8 @@
 nav ul li:hover {
     background-color: grey;
  }
+
+ #map{
+    height:400px;
+    width:100%;
+}
