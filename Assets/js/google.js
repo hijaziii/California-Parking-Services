@@ -1,5 +1,3 @@
-
-
 function initMap() {
   var options = {
     zoom: 8,
@@ -15,7 +13,7 @@ function initMap() {
   });
 
   var infoWindow = new google.maps.Infowindow({
-    content: '<h1>California<h1>'
+    content: '<h1>City of industry <h1>',
   });
 
   marker.addListener('click', function () {
