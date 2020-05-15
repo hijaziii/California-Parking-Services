@@ -1,22 +1,8 @@
-
-.icon-block {
-    padding: 0 15px;
-  }
-  .icon-block .material-icons {
-      font-size: inherit;
-  }
-  
-@media only screen and (max-width: 815px) {
-    nav {
-        height: 130px;
-    }
+nav {
+    height: 68px;
+    
 }
 
-@media only screen and (max-width: 480px) {
-    nav {
-        height: 200px;
-    }
-}
 nav ul li:hover {
     background-color: grey;
  }
@@ -25,7 +11,8 @@ nav ul li:hover {
     height:400px;
     width:100%;
 }
-
+    
 .card {
     min-height: 400px;
 }
+
