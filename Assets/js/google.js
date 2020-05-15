@@ -9,12 +9,14 @@ function initMap() {
   // Add Marker
   var marker = new google.maps.Marker({
     position: { lat: 34.0197, lng: -117.9587 },
-    map: map
+    map: map,
   });
 
-  var infoWindow = new google.maps.Infowindow({
-    content: '<h1>City of industry <h1>',
+  var infoWindow = new google.maps.InfoWindow({
+    content: '<h1>13181 Crossroads Parkway, Suite 580<h1>'
   });
+    content: '<h1>13181 Crossroads Parkway, Suite 580<h1>'
+  
 
   marker.addListener('click', function () {
     infoWindow.open(map, marker);
