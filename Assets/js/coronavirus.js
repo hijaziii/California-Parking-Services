@@ -1,6 +1,7 @@
 function coronaVirus() {
 var tempContainer = $("#scheduler_container")
     $.ajax({
+        // URl API key
         url: "https://covidtracking.com/api/v1/states/daily.json",
         method: 'get',
         success: function (response) {
@@ -10,7 +11,6 @@ var tempContainer = $("#scheduler_container")
            
            
             $('#modal_header').text('' + cali.state +  ' Covid-19 Details');
-        //    tempContainer.html('<h1>' + cali.state + ' </h1>');
             tempContainer.append(' <div class="card-panel blue  center"></div>');
            tempContainer.append(' <i class="material-icons large amber-text">person</i>');
            tempContainer.append('<h5>Confirmed Cases: ' + cali.positive + ' </h5>');
