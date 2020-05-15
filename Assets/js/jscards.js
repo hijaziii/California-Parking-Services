@@ -7,10 +7,12 @@ $(document).ready(function () {
         weatherRender();
     });
 
-    $('#scheduler_btn').click(function () {
-    $('#modal_header').text('Work Scheduler');
-    $('#scheduler_container').empty();
-        initializeScheduler();
+    $('#map_btn').click(function () {
+        $('#modal_header').text('Locations');
+        $('#scheduler_container').empty();
+        $('#scheduler_container').append($('<div>').attr('id', 'map'));
+        initMap();
+        //initializeScheduler();
     });
 
     $('#coronavirus').click(function () {
@@ -25,6 +27,7 @@ $(document).ready(function () {
         $('#clock').text(a)
     }, 1000);
 
+<<<<<<< HEAD
     var canvas = document.getElementById("canvas");
     // var ctx = canvas.getContext("2d");
     //  var radius = canvas.height / 2;
@@ -105,5 +108,8 @@ $(document).ready(function () {
         ctx.stroke();
         ctx.rotate(-pos);
     }
+=======
+    
+>>>>>>> 2d1df4e569cbf2ff2bbfbf975c88286aa0f3e2ed
 });
 
