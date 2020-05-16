@@ -15,10 +15,8 @@ function initMap() {
   var infoWindow = new google.maps.InfoWindow({
     content: '<h1>13181 Crossroads Parkway, Suite 580<h1>'
   });
-    content: '<h1>13181 Crossroads Parkway, Suite 580<h1>'
-  
-
-  marker.addListener('click', function () {
+    
+    marker.addListener('click', function () {
     infoWindow.open(map, marker);
   });
 
