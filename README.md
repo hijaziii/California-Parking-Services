@@ -7,8 +7,7 @@ making their website more accessible and modern looking with more interactive fe
 We redesigned 6 pages that represent the services and features of CPS including Valet, Parking Management, Special Events,
 Transportation, Contact, Home page, and their new Mobile Car Wash. Each group member had 2 pages assigned to them, but we
 ended up editing everyone's and working very collaboratively. On the home page, we created 3 server-side and 3rd party API's
-all designed to help plan your next event that would require professional parking services including a local weather app, a 
-scheduler, and a Coronavirus API that gives daily, dynamic updates on cases in your area.
+all designed to help plan your next event that would require professional parking services including a local weather app, Google maps, and a Coronavirus API that gives daily, dynamic updates on cases in your area.
 
 For the framework, we used Materialize, and powr.io for the Contact page, so the owners of the company can be in direct
 communication with inquiring customers. We also added 5 social media pages- as the company had none- that are all linked
