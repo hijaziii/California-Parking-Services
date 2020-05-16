@@ -1,5 +1,3 @@
-
-
 function initMap() {
   var options = {
     zoom: 8,
@@ -11,17 +9,11 @@ function initMap() {
   // Add Marker
   var marker = new google.maps.Marker({
     position: { lat: 34.0197, lng: -117.9587 },
-    map: map
+    map: map,
   });
 
-  // Add Marker
-  var marker = new google.maps.Marker({
-    position: { lat: 34.0197, lng: -117.958 },
-    map: map
-  });
-
-  var infoWindow = new google.maps.Infowindow({
-    content: '<h1>California<h1>'
+  var infoWindow = new google.maps.InfoWindow({
+    content: '<h1>13181 Crossroads Parkway, Suite 580<h1>'
   });
 
   marker.addListener('click', function () {

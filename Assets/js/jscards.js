@@ -12,7 +12,6 @@ $(document).ready(function () {
         $('#scheduler_container').empty();
         $('#scheduler_container').append($('<div>').attr('id', 'map'));
         initMap();
-        //initializeScheduler();
     });
 
     $('#coronavirus').click(function () {
