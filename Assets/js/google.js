@@ -14,6 +14,12 @@ function initMap() {
     map: map
   });
 
+  // Add Marker
+  var marker = new google.maps.Marker({
+    position: { lat: 34.0197, lng: -117.958 },
+    map: map
+  });
+
   var infoWindow = new google.maps.Infowindow({
     content: '<h1>California<h1>'
   });
