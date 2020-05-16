@@ -16,3 +16,6 @@ nav ul li:hover {
     min-height: 400px;
 }
 
+.card-panel{
+   max-height: 400px;
+}
